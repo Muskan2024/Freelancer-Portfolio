@@ -1,38 +1,30 @@
 import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-gray-200 text-black dark:bg-gray-900 dark:text-white py-6 text-center">
-      <p className="mb-2">Made with ❤️ by Muskan Pal</p>
+    <footer style={{ 
+      backgroundColor: 'var(--bg)', 
+      color: 'var(--text)', 
+      textAlign: 'center', 
+      padding: '30px 10px', 
+      borderTop: '1px solid #ccc' 
+    }}>
+      <p style={{ marginBottom: '10px' }}>Made with ❤️ by <strong>Muskan Pal</strong></p>
 
-      <div className="flex justify-center gap-6 mb-2">
-        <a
-          href="https://github.com/muskanpal"
-          target="_blank"
-          rel="noreferrer"
-          className="hover:text-blue-500 transition"
-        >
-          GitHub
+      <div style={{ marginBottom: '10px', display: 'flex', justifyContent: 'center', gap: '20px', fontSize: '1.5rem' }}>
+        <a href="https://github.com/muskanpal" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>
+          <FaGithub />
         </a>
-        <a
-          href="https://www.linkedin.com/in/muskan-pal-1092b0201/"
-          target="_blank"
-          rel="noreferrer"
-          className="hover:text-blue-500 transition"
-        >
-          LinkedIn
+        <a href="https://www.linkedin.com/in/muskan-pal-1092b0201/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text)' }}>
+          <FaLinkedin />
         </a>
-        <a
-          href="mailto:muskan2024h@gmail.com"
-          className="hover:text-blue-500 transition"
-        >
-          Email
+        <a href="mailto:muskan2024h@gmail.com" style={{ color: 'var(--text)' }}>
+          <FaEnvelope />
         </a>
       </div>
 
-      <p className="text-sm">
-        &copy; {new Date().getFullYear()} Muskan Portfolio. All rights reserved.
-      </p>
+      <p style={{ fontSize: '0.9rem' }}>&copy; {new Date().getFullYear()} Muskan Portfolio. All rights reserved.</p>
     </footer>
   );
 };
